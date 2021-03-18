@@ -17,6 +17,13 @@ body
 
 a
   text-decoration: none
+ul
+  list-style: none
+summary
+  display: block
+  outline: none
+  &::-webkit-details-marker
+    display: none
 
 .header
   background: $black
@@ -25,13 +32,13 @@ a
   align-items: center
   justify-content: space-between
 
-#header__logo_marg
-  margin-left: 40px
+  &__logo_marg
+    margin-left: 40px
 
-.header__right
-  display: flex
-  align-items: flex-end
-  gap: 33px
+  &__right
+    display: flex
+    align-items: flex-end
+    gap: 33px
 
 .promo
   background: #f1e4e6
@@ -215,7 +222,7 @@ a
 
 .info
   height: 340px
-  background: #222224
+  background: $black
   display: flex
   align-items: center
   justify-content: space-around
@@ -244,7 +251,7 @@ a
     width: 360px
 
 .footer
-  background-color: #222224
+  background-color: $black
   padding-left: calc(50% - 800px)
   padding-right: calc(50% - 800px)
 
@@ -272,75 +279,75 @@ a
     font-size: 20px
     line-height: 24px
     text-align: center
-    color: #222224
+    color: $black
 
-#footer__italic
-  font-style: italic
+  &__italic
+    font-style: italic
 
-.footer__right
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  color: #222224
+  &__right
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    color: $black
 
-.footer__title
-  font-weight: 700
-  font-size: 24px
-  line-height: 167.2%
-  text-align: center
+  &__title
+    font-weight: 700
+    font-size: 24px
+    line-height: 167.2%
+    text-align: center
 
-.footer__parag
-  width: 560px
-  font-weight: 400
-  font-size: 18px
-  line-height: 30px
-  text-align: center
-  padding-bottom: 32px
+  &__parag
+    width: 560px
+    font-weight: 400
+    font-size: 18px
+    line-height: 30px
+    text-align: center
+    padding-bottom: 32px
 
-.footer__form
-  display: flex
+  &__form
+    display: flex
 
-  & :first-child
-    width: 256px
-    height: 48px
-    font-family: Lato
-    font-size: 14px
-    line-height: 17px
-    opacity: 0.67
-    border-top-left-radius: 20px
-    border-bottom-left-radius: 20px
-    padding-left: 22px
-    box-sizing: border-box
+    & :first-child
+      width: 256px
+      height: 48px
+      font-family: Lato
+      font-size: 14px
+      line-height: 17px
+      opacity: 0.67
+      border-top-left-radius: 20px
+      border-bottom-left-radius: 20px
+      padding-left: 22px
+      box-sizing: border-box
 
-  & :last-child
-    width: 100px
-    height: 48px
-    font-family: Lato
-    font-style: normal
-    font-weight: normal
-    font-size: 14px
-    color: #ffffff
-    border-top-right-radius: 20px
-    border-bottom-right-radius: 20px
-    padding: 7px 7px 6px 8px
-    box-sizing: border-box
-    background: $lightRed
+    & :last-child
+      width: 100px
+      height: 48px
+      font-family: Lato
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      color: #ffffff
+      border-top-right-radius: 20px
+      border-bottom-right-radius: 20px
+      padding: 7px 7px 6px 8px
+      box-sizing: border-box
+      background: $lightRed
 
-.footer__bottom
-  height: 80px
-  display: flex
-  align-items: center
-  justify-content: space-between
+  &__bottom
+    height: 80px
+    display: flex
+    align-items: center
+    justify-content: space-between
 
-.footer__allright
-  font-size: 16px
-  line-height: 19px
-  color: #fbfbfb
+  &__allright
+    font-size: 16px
+    line-height: 19px
+    color: #fbfbfb
 
-.footer__links
-  display: flex
-  gap: 8px
+  &__links
+    display: flex
+    gap: 8px
 
 #footer__social
   width: 32px
@@ -420,7 +427,7 @@ a
     height: auto
 
   .footer
-    background-color: #222224
+    background-color: $black
     padding: 0
 
     &__parag
@@ -520,7 +527,7 @@ a
     padding-bottom: 80px
 
   .footer
-    background-color: #222224
+    background-color: $black
     padding-left: calc(50% - 384px)
     padding-right: calc(50% - 384px)
 
@@ -545,3 +552,4 @@ a
       margin: 44px 0px
 
 @import catalog
+@import product
