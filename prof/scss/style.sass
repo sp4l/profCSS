@@ -1,4 +1,5 @@
-@import _vars
+@import vars
+@import mixins
 
 *
   padding: 0
@@ -24,6 +25,12 @@ summary
   outline: none
   &::-webkit-details-marker
     display: none
+.text
+  font-family: Lato
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 17px
 
 .header
   background: $black
@@ -54,9 +61,7 @@ summary
     width: 100%
 
   &__text
-    display: flex
-    flex-direction: column
-    justify-content: center
+    +centerColumn()
     padding-bottom: 20px
 
   &__title
@@ -92,14 +97,10 @@ summary
     height: 260px
     flex-grow: 1
     background-position: center
-    display: flex
-    flex-direction: column
-    justify-content: center
+    +centerColumn()
 
   &__bottom > div
-    display: flex
-    flex-direction: column
-    justify-content: center
+    +centerColumn
 
   &__img01
     background-image: url(../img/sale_img01.jpg)
@@ -125,7 +126,7 @@ summary
   &__title
     font-weight: bold
     font-size: 24px
-    line-height: 28px
+    line-height: 29px
     text-align: center
     color: $lightRed
 
@@ -143,8 +144,6 @@ summary
     padding-bottom: 6px
 
   &__parag
-    font-size: 14px
-    line-height: 17px
     color: #9f9f9f
     text-align: center
     padding-bottom: 48px
@@ -181,10 +180,7 @@ summary
     margin: 24px 0px 0px 18px
 
   &__card_text
-    font-style: normal
     font-weight: 300
-    font-size: 14px
-    line-height: 17px
     color: #5d5d5d
     margin: 12px 16px 18px
 
@@ -247,10 +243,7 @@ summary
     padding: 28px 0px 16px
 
   &__parag
-    font-style: normal
     font-weight: 300
-    font-size: 14px
-    line-height: 17px
     text-align: center
     color: #fbfbfb
     width: 360px
@@ -269,10 +262,8 @@ summary
     align-items: center
 
   &__left
-    display: flex
-    flex-direction: column
+    +centerColumn()
     align-items: center
-    justify-content: center
 
   &__left :first-child
     width: 96px
@@ -290,16 +281,14 @@ summary
     font-style: italic
 
   &__right
-    display: flex
-    flex-direction: column
+    +centerColumn()
     align-items: center
-    justify-content: center
     color: $black
 
   &__title
-    font-weight: 700
+    font-weight: bold
     font-size: 24px
-    line-height: 167.2%
+    line-height: 29px
     text-align: center
 
   &__parag
@@ -316,31 +305,25 @@ summary
     & :first-child
       width: 256px
       height: 48px
-      font-family: Lato
-      font-size: 14px
-      line-height: 17px
       opacity: 0.67
       border-top-left-radius: 20px
       border-bottom-left-radius: 20px
       padding-left: 22px
       box-sizing: border-box
       border: none
+      color: $black
       background: #E1E1E1
 
     & :last-child
       width: 100px
       height: 48px
-      font-family: Lato
-      font-style: normal
-      font-weight: normal
-      font-size: 14px
-      color: #ffffff
       border-top-right-radius: 20px
       border-bottom-right-radius: 20px
       padding: 7px 7px 6px 8px
       box-sizing: border-box
       background: $lightRed
       border: none
+      color: #ffffff
 
   &__bottom
     height: 80px
@@ -357,15 +340,15 @@ summary
     display: flex
     gap: 8px
 
-#footer__social
-  width: 32px
-  height: 32px
-  background: white
-  padding: 8px
-  box-sizing: border-box
+  &__social
+    width: 32px
+    height: 32px
+    background: white
+    padding: 8px
+    box-sizing: border-box
 
-#footer__social:hover
-  background: $lightRed
+    &:hover
+      background: $lightRed
 
 .pulsate-fwd
   -webkit-animation: pulsate-fwd 1s ease-in-out infinite both
@@ -517,9 +500,9 @@ summary
       line-height: 53px
 
     &__text:last-child
-      font-weight: 700
+      font-weight: bold
       font-size: 24px
-      line-height: 28px
+      line-height: 29px
 
   .sale__top
     gap: 20px
@@ -605,10 +588,8 @@ summary
     padding-bottom: 64px
 
     &__top
-      display: flex
-      flex-direction: column
+      +centerColumn()
       align-items: center
-      justify-content: center
       gap: 32px
 
     &__top > div
@@ -616,15 +597,11 @@ summary
       width: 100%
       flex-grow: 1
       background-position: center
-      display: flex
-      flex-direction: column
-      justify-content: center
       background-repeat: no-repeat
+      +centerColumn()
 
     &__bottom
-      display: flex
-      flex-direction: column
-      justify-content: center
+      +centerColumn()
       align-items: center
 
     &__img01
@@ -663,8 +640,7 @@ summary
     &__top
       height: auto
       background: rgba(244, 244, 244, 0.7) url(../img/footer_media1024.png) no-repeat center
-      justify-content: center
-      flex-direction: column
+      +centerColumn()
       gap: 48px
       padding: 54px 0px 110px
 
@@ -683,3 +659,4 @@ summary
 @import catalog
 @import product
 @import cart
+@import reg
